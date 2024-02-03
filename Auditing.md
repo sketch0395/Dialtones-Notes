@@ -311,4 +311,7 @@ netstat -antp | grep LISTEN
 
 #Output#
 # tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      133/systemd-resolve
+
+lsof -i -n | grep LISTEN
+
 ```
