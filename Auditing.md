@@ -128,7 +128,7 @@ get-volume
 #             SYSTEM       FAT32          Fixed     Healthy      OK                    173.92 MB    256 MB
 #                          NTFS           Fixed     Healthy      OK                     48.64 MB    584 MB
 wmi logicaldisk list | Out-Gridview 
-#Presents better when able to view as grid
+#Presents better when able to view as grid  
 #Output
 # Access  Availability  BlockSize  Caption  Compressed  ConfigManagerErrorCode  ConfigManagerUserConfig  Description       DeviceID  DriveType  ErrorCleared  ErrorDescription  ErrorMethodology  FileSystem  FreeSpace     InstallDate  LastErrorCode  MaximumComponentLength  MediaType  Name  NumberOfBlocks  PNPDeviceID  PowerManagementCapabilities  PowerManagementSupported  ProviderName  Purpose  QuotasDisabled  QuotasIncomplete  QuotasRebuilding  Size           Status  StatusInfo  SupportsDiskQuotas  SupportsFileBasedCompression  VolumeName  VolumeSerialNumber
 # 0                                C:       FALSE                                                        Local Fixed Disk  C:        3
@@ -189,5 +189,126 @@ sudo awk '/installed/{print $1}' /var/log/dpkg.log | sort | uniq -c
 ### List Services
 ``` powershell 
 get-service
+#Output example list has been trimmed#
+# Status   Name               DisplayName
+# ------   ----               -----------
+# Stopped  AarSvc_dcb5d       Agent Activation Runtime_dcb5d
+# Running  AdobeARMservice    Adobe Acrobat Update Service
+# Stopped  AJRouter           AllJoyn Router Service
+# Stopped  ALG                Application Layer Gateway Service
+# Running  AMD Crash Defende… AMD Crash Defender Service
+# Running  AMD External Even… AMD External Events Utility
+# Running  AppIDSvc           Application Identity
+
 wmic service list brief
+#Output example list has be trimmed#
+# ExitCode  Name                                      ProcessId  StartMode  State    Status
+# 0         AdobeARMservice                           6088       Auto       Running  OK
+# 1077      AJRouter                                  0          Manual     Stopped  OK
+# 1077      ALG                                       0          Manual     Stopped  OK
+# 0         AMD Crash Defender Service                4500       Auto       Running  OK
+# 0         AMD External Events Utility               4492       Auto       Running  OK
+# 0         AppIDSvc                                  868        Manual     Running  OK
+# 0         Appinfo                                   10048      Manual     Running  OK
+# 1077      AppMgmt                                   0          Manual     Stopped  OK
+```
+
+```Bash 
+systemctl -a 
+
+#Output list has been trimmed#
+#  UNIT                                                                                                                                         >
+#   proc-sys-fs-binfmt_misc.automount                                                                                                            >
+#   dev-disk-by\x2did-scsi\x2d3600224801682b0e2be5c8033774f59ba.device                                                                           >
+#   dev-disk-by\x2did-scsi\x2d360022480aa6caf3fcdcc249918eed709.device                                                                           >
+#   dev-disk-by\x2did-scsi\x2d360022480c9dc3ceb171261d2e3751e69.device                                                                           >
+#   dev-disk-by\x2did-wwn\x2d0x600224801682b0e2be5c8033774f59ba.device                                                                           >
+#   dev-disk-by\x2did-wwn\x2d0x60022480aa6caf3fcdcc249918eed709.device                                                                           >
+#   dev-disk-by\x2did-wwn\x2d0x60022480c9dc3ceb171261d2e3751e69.device
+```
+
+### List Configured Services
+```Bash
+systemctl list-units
+
+#Output list has been trimmed#
+#   UNIT                                                                                                                                         >
+#   sys-devices-LNXSYSTM:00-LNXSYBUS:00-ACPI0004:00-VMBUS:00-9961b7e7\x2d69ce\x2d41c3\x2d9464\x2ddc910d85059a-net-eth0.device                    >
+#   sys-devices-LNXSYSTM:00-LNXSYBUS:00-ACPI0004:00-VMBUS:00-b5b95c49\x2d27f2\x2d4a7a\x2d87ec\x2defa3c1e4ae9a-pci27f2:00-27f2:00:00.0-virtio0-vir>
+#   sys-devices-LNXSYSTM:00-LNXSYBUS:00-ACPI0004:00-VMBUS:00-b5b95c49\x2d27f2\x2d4a7a\x2d87ec\x2defa3c1e4ae9a-pci27f2:00-27f2:00:00.0-virtio0-vir>
+#   sys-devices-LNXSYSTM:00-LNXSYBUS:00-ACPI0004:00-VMBUS:00-fd1d2cbd\x2dce7c\x2d535c\x2d966b\x2deb5f811c95f0-host0-target0:0:0-0:0:0:0-block-sda>
+#   sys-devices-LNXSYSTM:00-LNXSYBUS:00-ACPI0004:00-VMBUS:00-fd1d2cbd\x2dce7c\x2d535c\x2d966b\x2deb5f811c95f0-host0-target0:0:0-0:0:0:1-block-sdb>
+#   sys-devices-LNXSYSTM:00-LNXSYBUS:00-ACPI0004:00-VMBUS:00-fd1d2cbd\x2dce7c\x2d535c\x2d966b\x2deb5f811c95f0-host0-target0:0:0-0:0:0:2-block-sdc>
+#   sys-devices-platform-serial8250-tty-ttyS0.device                                                                                             >
+#   sys-devices-platform-serial8250-tty-ttyS1.device                                                                                             >
+#   sys-devices-platform-serial8250-tty-ttyS2.device                                                                                             >
+#   sys-devices-platform-serial8250-tty-ttyS3.device                                                                                             >
+#   sys-devices-virtual-block-ram0.device
+```
+
+### Start Service
+```Bash
+systemctl start <service name>
+```
+
+### Enable Service
+```Bash
+systemctl enable <service name>
+```
+
+### List Process
+```Powershell
+ps
+#Output example list has been trimmed#
+#  NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+#  ------    -----      -----     ------      --  -- -----------
+#      19     6.31       8.16      55.81    9600   1 AdobeCollabSync
+#      14     3.91       4.37       1.17   10660   1 AdobeCollabSync
+#      11     2.78      10.79       0.30    8064   0 AggregatorHost
+#       9     2.22       7.42       0.00    4500   0 amdfendrsr
+#      18     5.25      16.73       4.25    2788   0 AppHelperCap
+#      19     5.05      24.98       0.14    6644   1 ApplicationFrameHost
+#       9     1.80       8.57       0.00   24120   1 AppVShNotify
+#      10     1.97       7.25       0.08    6088   0 armsvc
+#      16     3.84      14.31      14.80    4752   1 atieclxx
+#       9     1.64       6.64       0.05    4492   0 atiesrxx
+```
+### List Running Process
+```Powershell
+tasklist
+
+#Output list has been trimmed#
+# Image Name                     PID Session Name        Session#    Mem Usage
+# ========================= ======== ================ =========== ============
+# System Idle Process              0 Services                   0          8 K
+# System                           4 Services                   0      4,044 K
+# Secure System                  108 Services                   0     40,708 K
+# Registry                       156 Services                   0     37,020 K
+# smss.exe                       588 Services                   0      1,284 K
+# csrss.exe                     1072 Services                   0      5,468 K
+# wininit.exe                   1196 Services                   0      6,596 K
+
+wmic process list brief
+
+#Output list has been trimmed#
+# HandleCount  Name                                                           Priority  ProcessId  ThreadCount  WorkingSetSize
+# 0            System Idle Process                                            0         0          16           8192
+# 6845         System                                                         8         4          296          4145152
+# 0            Secure System                                                  8         108        0            41684992
+# 0            Registry                                                       8         156        4            37871616
+# 58           smss.exe                                                       11        588        2            1314816
+# 829          csrss.exe                                                      13        1072       13           5595136
+# 145          wininit.exe                                                    13        1196       2            6754304
+# 981          csrss.exe                                                      13        1216       16           14962688
+# 281          winlogon.exe                                                   13        1308       3            11599872
+# 889          services.exe                                                   9         1328       7            17014784
+```
+
+### List Network Services
+
+```Bash
+netstat -antp | grep LISTEN
+
+#Output#
+# tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      133/systemd-resolve
 ```
