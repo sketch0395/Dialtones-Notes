@@ -14,7 +14,7 @@
 
 [Bash](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Bash/bash.md)
 
-[Event Logs]()
+[Event Logs](https://github.com/sketch0395/Dialtones-Notes/blob/main/Auditing/Event%20Logs/Event%20Logs.md)
 
 [NMAP](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Nmap/nmap.md)
 
