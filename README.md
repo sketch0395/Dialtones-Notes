@@ -10,11 +10,11 @@
  Quick Auditing commands 
  Guide of commands to assist in Auditing, basic commands are shown, will update with how to use, and expected outputs will come with time. 
 
-[Active Directory](../https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Active%20Directory/Active%20Directory.md)
+[Active Directory](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Active%20Directory/Active%20Directory.md)
 
-[Bash](../https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Bash/bash.md)
+[Bash](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Bash/bash.md)
 
-[NMAP](../https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Nmap/nmap.md)
+[NMAP](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Nmap/nmap.md)
 
-[Powershell](../https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Powershell/powershell.md)
+[Powershell](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Powershell/powershell.md)
  
