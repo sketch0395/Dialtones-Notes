@@ -1,4 +1,4 @@
-# Welcome to my work in progeress
+# Welcome to my work in progress
  This is a respository of my most commonly used scripts and CLI kung-fu. This is a work in progress, and will be updated regularly until complete. 
 
  There may be some time in between updates as I am validating.   
