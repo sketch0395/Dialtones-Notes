@@ -3,6 +3,8 @@
 
  There may be some time in between updates as I am validating.   
 
+ !!! These are all done on a virtual lab, outputs are examples and may not reflect what you see !!! 
+
 
 ## Auditing
  Quick Auditing commands 

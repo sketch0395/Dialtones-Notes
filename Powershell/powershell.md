@@ -90,3 +90,98 @@ wmi logicaldisk list | Out-Gridview
 #                                                                                   TRUE            FALSE             FALSE             1000203087872
 #              TRUE                TRUE                          DATA        123C535C
 ```
+
+### File Share
+```powershell
+#List SMB shares#
+get-smbshare
+#List File Share#
+get-fileshare
+```
+## Patches/Updates
+### Windows
+```Powershell
+#Installed Patches#
+get-hotfix
+wmic qfe list brief
+#Installed Apps#
+get-wmiobject win32_product
+wmic product list brief
+```
+
+## Network / Local Services
+
+### List Services
+``` powershell 
+get-service
+#Output example list has been trimmed#
+# Status   Name               DisplayName
+# ------   ----               -----------
+# Stopped  AarSvc_dcb5d       Agent Activation Runtime_dcb5d
+# Running  AdobeARMservice    Adobe Acrobat Update Service
+# Stopped  AJRouter           AllJoyn Router Service
+# Stopped  ALG                Application Layer Gateway Service
+# Running  AMD Crash Defende… AMD Crash Defender Service
+# Running  AMD External Even… AMD External Events Utility
+# Running  AppIDSvc           Application Identity
+
+wmic service list brief
+#Output example list has be trimmed#
+# ExitCode  Name                                      ProcessId  StartMode  State    Status
+# 0         AdobeARMservice                           6088       Auto       Running  OK
+# 1077      AJRouter                                  0          Manual     Stopped  OK
+# 1077      ALG                                       0          Manual     Stopped  OK
+# 0         AMD Crash Defender Service                4500       Auto       Running  OK
+# 0         AMD External Events Utility               4492       Auto       Running  OK
+# 0         AppIDSvc                                  868        Manual     Running  OK
+# 0         Appinfo                                   10048      Manual     Running  OK
+# 1077      AppMgmt                                   0          Manual     Stopped  OK
+```
+
+### List Process
+```Powershell
+ps
+#Output example list has been trimmed#
+#  NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+#  ------    -----      -----     ------      --  -- -----------
+#      19     6.31       8.16      55.81    9600   1 AdobeCollabSync
+#      14     3.91       4.37       1.17   10660   1 AdobeCollabSync
+#      11     2.78      10.79       0.30    8064   0 AggregatorHost
+#       9     2.22       7.42       0.00    4500   0 amdfendrsr
+#      18     5.25      16.73       4.25    2788   0 AppHelperCap
+#      19     5.05      24.98       0.14    6644   1 ApplicationFrameHost
+#       9     1.80       8.57       0.00   24120   1 AppVShNotify
+#      10     1.97       7.25       0.08    6088   0 armsvc
+#      16     3.84      14.31      14.80    4752   1 atieclxx
+#       9     1.64       6.64       0.05    4492   0 atiesrxx
+```
+### List Running Process
+```Powershell
+tasklist
+
+#Output list has been trimmed#
+# Image Name                     PID Session Name        Session#    Mem Usage
+# ========================= ======== ================ =========== ============
+# System Idle Process              0 Services                   0          8 K
+# System                           4 Services                   0      4,044 K
+# Secure System                  108 Services                   0     40,708 K
+# Registry                       156 Services                   0     37,020 K
+# smss.exe                       588 Services                   0      1,284 K
+# csrss.exe                     1072 Services                   0      5,468 K
+# wininit.exe                   1196 Services                   0      6,596 K
+
+wmic process list brief
+
+#Output list has been trimmed#
+# HandleCount  Name                                                           Priority  ProcessId  ThreadCount  WorkingSetSize
+# 0            System Idle Process                                            0         0          16           8192
+# 6845         System                                                         8         4          296          4145152
+# 0            Secure System                                                  8         108        0            41684992
+# 0            Registry                                                       8         156        4            37871616
+# 58           smss.exe                                                       11        588        2            1314816
+# 829          csrss.exe                                                      13        1072       13           5595136
+# 145          wininit.exe                                                    13        1196       2            6754304
+# 981          csrss.exe                                                      13        1216       16           14962688
+# 281          winlogon.exe                                                   13        1308       3            11599872
+# 889          services.exe                                                   9         1328       7            17014784
+```
