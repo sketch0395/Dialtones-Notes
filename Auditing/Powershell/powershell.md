@@ -1,5 +1,73 @@
 ## Basic System Info
-          
+
+```Powershell
+$PSVersionTable
+```
+```OUTPUT:Windows Powershell | Powershell.exe version 5.1```
+```Powershell
+Name                           Value
+----                           -----
+PSVersion                      5.1.20348.558
+PSEdition                      Desktop
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
+BuildVersion                   10.0.20348.558
+CLRVersion                     4.0.30319.42000
+WSManStackVersion              3.0
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+```
+
+```OUTPUT:Powershell Core | PWSH.exe version 7 and up```
+```Powershell
+Name                           Value
+----                           -----
+PSVersion                      7.4.1
+PSEdition                      Core
+GitCommitId                    7.4.1
+OS                             Microsoft Windows 10.0.22631
+Platform                       Win32NT
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+WSManStackVersion              3.0
+```
+
+## Alias Information
+
+```Powershell
+Get-Alias
+```
+```OUTPUT:Windows Powershell```
+```Powershell
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           asnp -> Add-PSSnapin
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           CFS -> ConvertFrom-String                          3.1.0.0    Microsoft.PowerShell.Utility
+Alias           chdir -> Set-Location
+```
+
+```OUTPUT:Windows Powershell Core```
+```Powershell
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           ? -> Where-Object
+Alias           % -> ForEach-Object
+Alias           ac -> Add-Content
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clear -> Clear-Host
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+```
+
 ```Powershell
 #Basic information#
 systeminfo
