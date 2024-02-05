@@ -14,6 +14,8 @@
 
 [Bash](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Bash/bash.md)
 
+[Event Logs]()
+
 [NMAP](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Nmap/nmap.md)
 
 [Powershell](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Powershell/powershell.md)
