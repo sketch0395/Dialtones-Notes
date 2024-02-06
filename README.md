@@ -20,3 +20,9 @@
 
 [Powershell](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Powershell/powershell.md)
  
+## Basic folder
+Basic commands and understanding of OS
+
+[Linux_Ubuntu](https://github.com/sketch0395/Dialtones-Notes/blob/main/Basics/Linux.md)
+
+[Windows 11](https://github.com/sketch0395/Dialtones-Notes/blob/main/Basics/Windows.md) 
