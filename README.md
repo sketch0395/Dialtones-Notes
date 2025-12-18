@@ -6,23 +6,41 @@
  !!! These are all done on a virtual lab, outputs are examples and may not reflect what you see !!! 
 
 
-## Auditing
- Quick Auditing commands 
- Guide of commands to assist in Auditing, basic commands are shown, will update with how to use, and expected outputs will come with time. 
-
-[Active Directory](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Active%20Directory/Active%20Directory.md)
-
-[Bash](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Bash/bash.md)
-
-[Event Logs](https://github.com/sketch0395/Dialtones-Notes/blob/main/Auditing/Event%20Logs/Event%20Logs.md)
-
-[NMAP](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Nmap/nmap.md)
-
-[Powershell](https://github.com/sketch0395/Dialtones-Notes/blob/main//Auditing/Powershell/powershell.md)
- 
-## Basic folder
+## .01 Basics
 Basic commands and understanding of OS
 
-[Linux_Ubuntu](https://github.com/sketch0395/Dialtones-Notes/blob/main/Basics/Linux.md)
+[Git](https://github.com/sketch0395/Dialtones-Notes/blob/main/.01%20Basics/git.md)
 
-[Windows 11](https://github.com/sketch0395/Dialtones-Notes/blob/main/Basics/Windows.md) 
+[Linux_Ubuntu](https://github.com/sketch0395/Dialtones-Notes/blob/main/.01%20Basics/Linux.md)
+
+[Trivy](https://github.com/sketch0395/Dialtones-Notes/blob/main/.01%20Basics/trivy.md)
+
+[Windows 11](https://github.com/sketch0395/Dialtones-Notes/blob/main/.01%20Basics/Windows.md)
+
+## .02 Advanced
+Advanced tools and configurations
+
+[Cloudflare Tunnel](https://github.com/sketch0395/Dialtones-Notes/blob/main/.02%20Advanced/Cloudflare_Tunnel.md)
+
+[Digispark Rubber Ducky](https://github.com/sketch0395/Dialtones-Notes/blob/main/.02%20Advanced/Digispark_Rubber_Ducky.md)
+
+[Docker Remote Server Setup](https://github.com/sketch0395/Dialtones-Notes/blob/main/.02%20Advanced/Docker_remote_server_setup.md)
+
+[HTTrack](https://github.com/sketch0395/Dialtones-Notes/blob/main/.02%20Advanced/HTTrack.md)
+
+[Install Docker on Ubuntu Server](https://github.com/sketch0395/Dialtones-Notes/blob/main/.02%20Advanced/Install_docker_Ubuntu_server.md)
+
+[Kibana Docker](https://github.com/sketch0395/Dialtones-Notes/blob/main/.02%20Advanced/Kibana_docker.md)
+
+## .03 Auditing
+Quick Auditing commands - Guide of commands to assist in Auditing, basic commands are shown, will update with how to use, and expected outputs will come with time.
+
+[Active Directory](https://github.com/sketch0395/Dialtones-Notes/blob/main/.03%20Auditing/Active%20Directory/Active%20Directory.md)
+
+[Bash](https://github.com/sketch0395/Dialtones-Notes/blob/main/.03%20Auditing/Bash/bash.md)
+
+[Event Logs](https://github.com/sketch0395/Dialtones-Notes/blob/main/.03%20Auditing/Event%20Logs/Event%20Logs.md)
+
+[NMAP](https://github.com/sketch0395/Dialtones-Notes/blob/main/.03%20Auditing/Nmap/nmap.md)
+
+[Powershell](https://github.com/sketch0395/Dialtones-Notes/blob/main/.03%20Auditing/Powershell/powershell.md) 
