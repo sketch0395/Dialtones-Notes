@@ -79,6 +79,11 @@ Get-Help
 systeminfo
 ```
 
+## Serial Number
+```Powershell
+Get-CimInstance Win32_BIOS | Select-Object SerialNumber
+```
+
 ```Output```
 ```Powershell
 System Model:              
